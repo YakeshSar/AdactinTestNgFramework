@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="4057" started-at="2023-01-19T18:46:26Z" finished-at="2023-01-19T18:46:30Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="4057" started-at="2023-01-19T18:46:26Z" finished-at="2023-01-19T18:46:30Z">
+      <class name="com.tests.LoginPage">
+        <test-method status="PASS" signature="openBrowser()[pri:0, instance:com.tests.LoginPage@2b491fee]" name="openBrowser" duration-ms="1544" started-at="2023-01-19T18:46:26Z" finished-at="2023-01-19T18:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="verifyTitle()[pri:1, instance:com.tests.LoginPage@2b491fee]" name="verifyTitle" duration-ms="13" started-at="2023-01-19T18:46:28Z" finished-at="2023-01-19T18:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method status="PASS" signature="verifyNewUSer()[pri:2, instance:com.tests.LoginPage@2b491fee]" name="verifyNewUSer" duration-ms="46" started-at="2023-01-19T18:46:28Z" finished-at="2023-01-19T18:46:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyNewUSer -->
+        <test-method status="PASS" signature="verifyLogin()[pri:3, instance:com.tests.LoginPage@2b491fee]" name="verifyLogin" duration-ms="2438" started-at="2023-01-19T18:46:28Z" finished-at="2023-01-19T18:46:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+      </class> <!-- com.tests.LoginPage -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
