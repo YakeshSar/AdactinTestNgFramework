@@ -1,6 +1,8 @@
 package com.tests;
 
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.objects.BasePage;
 import com.objects.Login;
@@ -17,7 +19,7 @@ public class LoginPage
 		}
 		
 		
-		@Test(priority = 0)
+		@BeforeTest
 		public void openBrowser() {
 			bp.launch();
 		}
@@ -40,5 +42,9 @@ public class LoginPage
 			l.login();
 		}
 		
+		@AfterTest
+		public void closeTheBrowser() {
+			bp.driver.close();
+		}
 		
 }
