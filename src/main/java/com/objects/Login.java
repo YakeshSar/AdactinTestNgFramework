@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import io.qameta.allure.Step;
+
 public class Login extends BasePage{
 
 	public Login(){
@@ -21,6 +23,10 @@ public class Login extends BasePage{
 	
 	@FindBy(linkText = "New User Register Here")
 	private WebElement newUser;
+	
+	@FindBy(id ="username_show")
+	private WebElement username_show;
+	
 
 	public WebElement getUsername() {
 		return username;
@@ -37,14 +43,33 @@ public class Login extends BasePage{
 	public WebElement getNewUser() {
 		return newUser;
 	}
+	
+	public WebElement getUsername_show() {
+		return username_show;
+	}
 
+	
+
+	@Step("verify the username {0} and password {1}")
 	public void login() {
 		setValue(getUsername(), "Yakesh150720");
-		setValue(getPassword(), "Yakesh@1507");
+		setValue(getPassword(), "Yakesh#1507");
 		clickButton(getLoginButton());
+		System.out.println(getUsername_show().getAttribute("value"));
 	}
 	
+
+	@Step("verify the page of title")
+	public void getTitleOfPage() {
+		String titleOfThePage = driver.getTitle();
+		System.out.println(titleOfThePage);
+	}
 	
+	@Step("Verify the new user link")
+	public void verifyNewUser() {
+		WebElement newUser = getNewUser();
+		System.out.println(newUser.getText());
+	}
 	
 }
 
